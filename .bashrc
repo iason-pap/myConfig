@@ -33,7 +33,7 @@ alias free='free -m'
 alias ls='ls -c --color'
 
 alias more=less
-alias c='clear'
+alias c='clear && splash.sh'
 alias p='sudo pacman'
 alias vim='nvim'
 alias tetris='yetris' 
@@ -43,31 +43,37 @@ alias dice="python projects/python_scripts/dice.py"
 alias yt='yt-dlp --add-metadata -ic' #youtube video download 
 alias yta='yt-dlp --add-metadata -xic' #youtube audio download
 alias tetris="quadrapassel"
+alias mathe-vorlesung="mpv 'https://lxkl.net:591/live/hls/Steinitz.m3u8'"
+alias mathe-vorlesung-alternative="mpv https://service.math.uni-kiel.de:591/live/hls/EG.004.m3u8"
+alias lautgleichlustig="echo ffmpeg -y -i <input> -c:a libopus -filter:a 'crystalizer=i=10, volume=4, acrusher=.1:1:60:0:log' sample1.ogg"
+alias dyonis="ssh iason@192.168.178.43"
 
-
-alias autosteam="bash ~/build/scripts/autosteam"
-
-alias eftssh='sudo ssh root@127.0.0.1 -L 443:127.0.0.1:3000 -N'
+set -o vi
 
 function mkcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
 
-
-
+export PATH=$PATH:$HOME/.cabal/bin:$HOME/.ghcup/bin
+export PATH=$PATH:$HOME/build/ltex-ls
+export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:/usr/lib/jvm/java-17-openjdk
+export R2MOD_INSTALL_DIR="/home/iason/floppy/SteamLibrary/steamapps/common/Risk of Rain 2"
 #eval "$(thefuck --alias)"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/anaconda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/anaconda/etc/profile.d/conda.sh" ]; then
-        . "/opt/anaconda/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/anaconda/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+splash.sh
+
+## >>> conda initialize >>>
+## !! Contents within this block are managed by 'conda init' !!
+#__conda_setup="$('/opt/anaconda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    eval "$__conda_setup"
+#else
+#    if [ -f "/opt/anaconda/etc/profile.d/conda.sh" ]; then
+#        . "/opt/anaconda/etc/profile.d/conda.sh"
+#    else
+#        export PATH="/opt/anaconda/bin:$PATH"
+#    fi
+#fi
+#unset __conda_setup
+## <<< conda initialize <<<
 
