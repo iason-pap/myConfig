@@ -1,11 +1,13 @@
-#      ▄▄▄▄▄▄▄ ▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄   ▄▄ ▄▄▄▄▄▄   ▄▄▄▄▄▄▄ 
-#     █  ▄    █      █       █  █ █  █   ▄  █ █       █
-#     █ █▄█   █  ▄   █  ▄▄▄▄▄█  █▄█  █  █ █ █ █       █
-#     █       █ █▄█  █ █▄▄▄▄▄█       █   █▄▄█▄█     ▄▄█
-# ▄▄▄ █  ▄   ██      █▄▄▄▄▄  █   ▄   █    ▄▄  █    █   
-#█   ██ █▄█   █  ▄   █▄▄▄▄▄█ █  █ █  █   █  █ █    █▄▄ 
-#█▄▄▄██▄▄▄▄▄▄▄█▄█ █▄▄█▄▄▄▄▄▄▄█▄▄█ █▄▄█▄▄▄█  █▄█▄▄▄▄▄▄▄█
-
+#________/\\\_____________________________________/\\\_____________________________________
+# _______\/\\\____________________________________\/\\\_____________________________________
+#  _______\/\\\____________________________________\/\\\_____________________________________
+#   _______\/\\\_________/\\\\\\\\\_____/\\\\\\\\\\_\/\\\__________/\\/\\\\\\\______/\\\\\\\\_
+#    _______\/\\\\\\\\\__\////////\\\___\/\\\//////__\/\\\\\\\\\\__\/\\\/////\\\___/\\\//////__
+#     _______\/\\\////\\\___/\\\\\\\\\\__\/\\\\\\\\\\_\/\\\/////\\\_\/\\\___\///___/\\\_________
+#      _______\/\\\__\/\\\__/\\\/////\\\__\////////\\\_\/\\\___\/\\\_\/\\\_________\//\\\________
+#       __/\\\_\/\\\\\\\\\__\//\\\\\\\\/\\__/\\\\\\\\\\_\/\\\___\/\\\_\/\\\__________\///\\\\\\\\_
+#        _\///__\/////////____\////////\//__\//////////__\///____\///__\///_____________\////////__
+#
 #[[ $- != *i* ]] && return
 
 use_color=true
@@ -39,14 +41,12 @@ alias vim='nvim'
 alias tetris='yetris' 
 alias zooms="bash /home/iason/bin/zoomman.sh"
 alias dice="python projects/python_scripts/dice.py"
-#alias f='fuck'
 alias yt='yt-dlp --add-metadata -ic' #youtube video download 
 alias yta='yt-dlp --add-metadata -xic' #youtube audio download
 alias tetris="quadrapassel"
 alias mathe-vorlesung="mpv 'https://lxkl.net:591/live/hls/Steinitz.m3u8'"
 alias mathe-vorlesung-alternative="mpv https://service.math.uni-kiel.de:591/live/hls/EG.004.m3u8"
 alias lautgleichlustig="echo ffmpeg -y -i <input> -c:a libopus -filter:a 'crystalizer=i=10, volume=4, acrusher=.1:1:60:0:log' sample1.ogg"
-alias dyonis="ssh iason@192.168.178.43"
 
 set -o vi
 
@@ -54,6 +54,7 @@ function mkcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
 
 export PATH=$PATH:$HOME/.cabal/bin:$HOME/.ghcup/bin
+<<<<<<< HEAD
 export PATH=$PATH:$HOME/build/ltex-ls
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:/usr/lib/jvm/java-17-openjdk
@@ -76,4 +77,10 @@ splash.sh
 #fi
 #unset __conda_setup
 ## <<< conda initialize <<<
+=======
+export R2MOD_INSTALL_DIR="/home/iason/floppy/SteamLibrary/steamapps/common/Risk of Rain 2"
+
+
+#./splash.sh
+>>>>>>> b16923f54812b2b20416ce0748ddb36b32bb5a45
 
