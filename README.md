@@ -3,3 +3,4 @@
 - ~/.bashrc
 - ~/.config/kitty
 - ~/.config/fish
+- ~/.config/redshift
